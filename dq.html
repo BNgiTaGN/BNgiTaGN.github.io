@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到原神!</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
+    <style>
+        body {
+            /*background-image: url("./imgs/稻妻城.jpg");*/
+            /*background-color:white;*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center;*/
+            background-size: 100%;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 90vh;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img class="backgroundimg a-img" src="./imgs/稻妻城.jpg">
+    <img class="ico" alt="" src="./imgs/原神图标.png">
+    <div class="zhuti">
+        <div class="daohanglan">
+            <li><a href="index.html" class="zy">主页</a></li>
+            <li><a href="md.html" class="md">蒙德</a></li>
+            <li><a href="ly.html" class="ly">璃月</a></li>
+            <li><a href="dq.html" class="dq">稻妻</a></li>
+            <li><a href="xm.html" class="xm">须弥</a></li>
+            <li><a href="dl.html" class="denglu">登录</a></li>
+        </div>
+    </div>
+    <a href="https://ys.mihoyo.com/">
+        <button>前往原神官网</button>
+    </a>
+</header>
+<div class="index">
+    <div class="renwu">
+        <img class="c" onclick="showReview()" src="./imgs/宵宫大头照.png"><br><a>宵宫</a><br>
+        <img class="c" onclick="showReview()" src="./imgs/hlyddtz.png"><br><a>荒泷一斗</a><br>
+        <img class="c" onclick="showReview()" src="./imgs/bcszdtz.png"><br><a>八重神子</a><br>
+    </div>
+    <div class="lihui">
+        <img class="l active-pic" src="./imgs/xglh.png">
+        <img class="l" src="./imgs/hlydlh.png">
+        <img class="l" src="./imgs/bcszlh.png">
+    </div>
+    <div class="name">
+        <img class="n active-name" src="./imgs/mzxg.png">
+        <img class="n" src="./imgs/mzhlyd.png">
+        <img class="n" src="./imgs/mzbcsz.png">
+    </div>
+    <div class="cd">
+        <div class="cdd active-cdd">
+            <p>才华横溢的烟花工匠，「长野原烟花店」的现任店主，被誉为「夏祭的女王」。</p>
+            <p>热情似火的少女。未泯的童心与匠人的执着在她身上交织出了奇妙的焰色反应。</p>
+        </div>
+        <div class="cdd">
+            <p>鬼族后裔，性格豪爽热血的快意男儿。<br>
+                如风一般迅猛，也如雷一般夺目。</p>
+        </div>
+        <div class="cdd">
+            <p>掌管鸣神大社的大巫女、狐之血脉的延续者、「永恒」的眷属与友人，以及，轻小说出版社「八重堂」的恐怖总编…<br>
+                有着多重身份的神秘宫司，凡人们或许永远无法了解她的真面目与真心。</p>
+        </div>
+    </div>
+    <div class="cd-img">
+        <img class="cdi active-cdi" src="./imgs/jsxg.png">
+        <img class="cdi" src="./imgs/jshlyd.png">
+        <img class="cdi" src="./imgs/jsbcsz.png">
+    </div>
+    <a class="footer">本页面及其所有附属页面素材均来自miHoYo,侵权必删。</a>
+</div>
+<script>
+    let cs = document.getElementsByClassName("c")
+    let lpics = document.getElementsByClassName("l")
+    let cds = document.getElementsByClassName("cdd")
+    let cdimgs = document.getElementsByClassName("cdi")
+    let names = document.getElementsByClassName("n")
+
+    function showReview() {
+        for (lpic of lpics) {
+            lpic.classList.remove("active-pic")
+        }
+        for (cd of cds) {
+            cd.classList.remove("active-cdd")
+        }
+        for (cdi of cdimgs) {
+            cdi.classList.remove("active-cdi")
+        }
+        for (n of names) {
+            n.classList.remove("active-name")
+        }
+        let i = Array.from(cs).indexOf(event.target)
+        lpics[i].classList.add("active-pic")
+        cds[i].classList.add("active-cdd")
+        cdimgs[i].classList.add("active-cdi")
+        names[i].classList.add('active-name')
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到原神!</title>
+  <link href="index.css" type="text/css" rel="stylesheet">
+    <style>
+        body{
+            /*background-image: url("./imgs/蒙德城.jpg");*/
+            /*background-color:white;*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center;*/
+            /*background-size: 100%;*/
+            font-family: 'Montserrat', sans-serif;
+            min-height: 90vh;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="backgroundimg a-img" src="./imgs/蒙德城.jpg">
+        <img class="ico" alt="" src="./imgs/原神图标.png">
+        <div class="zhuti">
+             <div class="daohanglan">
+                 <li><a href="index.html" class="zy">主页</a></li>
+                 <li><a href="md.html" class="md">蒙德</a></li>
+                 <li><a href="ly.html" class="ly">璃月</a></li>
+                 <li><a href="dq.html" class="dq">稻妻</a></li>
+                 <li><a href="xm.html" class="xm">须弥</a></li>
+                 <li><a href="dl.html" class="denglu">登录</a></li>
+            </div>
+        </div>
+        <a href="https://ys.mihoyo.com/" ><button>前往原神官网</button></a>
+    </header>
+    <div class="index">
+        <div class="renwu">
+            <img class="c" onclick="showReview()" src="./imgs/迪卢克大头照.png"><br><a>迪卢克</a><br>
+            <img class="c" onclick="showReview()" src="./imgs/温迪大头照.png"><br><a>温迪</a><br>
+            <img class="c" onclick="showReview()" src="./imgs/可莉大头照.png"><br><a>可莉</a><br>
+        </div>
+        <div class="lihui">
+            <img class="l active-pic" src="./imgs/迪卢克立绘.png">
+            <img class="l" src="./imgs/温迪立绘.png">
+            <img class="l" src="./imgs/可莉立绘.png">
+        </div>
+        <div class="name">
+            <img class="n active-name" src="./imgs/迪卢克名字.png">
+            <img class="n" src="./imgs/温迪名字.png">
+            <img class="n" src="./imgs/可莉名字.png">
+        </div>
+        <div class="cd">
+            <div class="cdd active-cdd" >
+                <p>身为蒙德城第一富豪，风度翩翩的迪卢克总是以完美的贵公子形象示人。</p>
+                <p>然而他真实的一面，是秉承坚定信念的战士，他那「不惜一切守护蒙德」的意志犹如火焰般炽热，
+                    <br></br>令他能以恐怖的攻势，毫不留情地将一切敌人击溃。</p>
+
+            </div>
+            <div class="cdd" >
+                <p>来路不明的吟游诗人，有时唱一些老掉牙的旧诗，有时又会唱出谁也没听过的新歌。</p>
+                <p>喜欢苹果和热闹的气氛，讨厌奶酪和一切黏糊糊的物质。</p>
+                <p>在引导「风」的元素力时，元素的塑形往往外显为羽毛，因为他很中意看上去轻飘飘的东西。</p>
+            </div>
+            <div class="cdd" >
+                <p>西风骑士团，火花骑士！永远伴随闪光与爆炸出现！                            </p>
+                <p>——然后在琴团长严厉的目光注视下默默消失。                                  </p>
+                <p>虽然新炸药的配方，很多都是在被关禁闭的时候想出来的……                          </p>
+                <p>
+但如果不被关禁闭的话，就更好了。</p>
+            </div>
+        </div>
+        <div class="cd-img">
+            <img class="cdi active-cdi"src="./imgs/迪卢克介绍.png">
+            <img class="cdi"src="./imgs/温迪介绍.png">
+            <img class="cdi"src="./imgs/可莉介绍.png">
+        </div>
+    </div>
+    <a class="footer">本页面及其所有附属页面素材均来自miHoYo,侵权必删。</a>
+    <script>
+        let cs=document.getElementsByClassName("c")
+        let lpics=document.getElementsByClassName("l")
+        let cds=document.getElementsByClassName("cdd")
+        let cdimgs=document.getElementsByClassName("cdi")
+        let names=document.getElementsByClassName("n")
+    function showReview(){
+        for(lpic of lpics){
+            lpic.classList.remove("active-pic")
+        }
+        for(cd of cds)
+        {
+            cd.classList.remove("active-cdd")
+        }
+        for(cdi of cdimgs)
+        {
+            cdi.classList.remove("active-cdi")
+        }
+        for(n of names)
+        {
+            n.classList.remove("active-name")
+        }
+        let i=Array.from(cs).indexOf(event.target)
+        lpics[i].classList.add("active-pic")
+        cds[i].classList.add("active-cdd")
+        cdimgs[i].classList.add("active-cdi")
+        names[i].classList.add('active-name')
+    }
+    </script>
+</body>
+</html>

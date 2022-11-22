@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到原神!</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
+    <style>
+        body {
+            /*background-image: url("./imgs/须弥城.jpg");*/
+            /*background-color:white;*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center;*/
+            /*background-size: 100%;*/
+            font-family: 'Montserrat', sans-serif;
+            min-height: 90vh;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img class="backgroundimg a-img" src="./imgs/须弥城.jpg">
+    <img class="ico" alt="" src="./imgs/原神图标.png">
+    <div class="zhuti">
+        <div class="daohanglan">
+            <li><a href="index.html" class="zy">主页</a></li>
+            <li><a href="md.html" class="md">蒙德</a></li>
+            <li><a href="ly.html" class="ly">璃月</a></li>
+            <li><a href="dq.html" class="dq">稻妻</a></li>
+            <li><a href="xm.html" class="xm">须弥</a></li>
+            <li><a href="dl.html" class="denglu">登录</a></li>
+        </div>
+    </div>
+    <a href="https://ys.mihoyo.com/">
+        <button>前往原神官网</button>
+    </a>
+</header>
+<div class="index">
+    <div class="renwu">
+        <img class="c" onclick="showReview()" src="./imgs/多莉大头照.png"><br><a>多莉</a><br>
+        <img class="c" onclick="showReview()" src="./imgs/纳西妲大头照.png"><br><a>纳西妲</a><br>
+        <img class="c" onclick="showReview()" src="./imgs/坎蒂丝大头照.png"><br><a>坎蒂丝</a><br>
+    </div>
+    <div class="lihui">
+        <img class="l active-pic" src="./imgs/多莉立绘.png">
+        <img class="l" src="./imgs/纳西妲立绘.png">
+        <img class="l" src="./imgs/坎蒂丝立绘.png">
+    </div>
+    <div class="name">
+        <img class="n active-name" src="./imgs/多莉名字.png">
+        <img class="n" src="./imgs/纳西妲名字.png">
+        <img class="n" src="./imgs/坎蒂丝名字.png">
+    </div>
+    <div class="cd">
+        <div class="cdd active-cdd">
+            <p>多莉是活跃在须弥的百货商人，最喜欢亮闪闪的摩拉。<br>
+                能靠着精湛话术将手里那些许多奇特又神秘的道具卖出高价。</p>
+        </div>
+        <div class="cdd">
+            <p>「小吉祥草王」深居于净善宫内，向来不受重视，也很少被人提及。<br>
+                她身负重任，哪怕目睹漆黑，经历孤独，也不曾停下脚步。</p>
+        </div>
+        <div class="cdd">
+            <p>阿如村的守护者，为人温柔和善。在她的守护下，几乎没人能够危害阿如村。</p>
+        </div>
+    </div>
+    <div class="cd-img">
+        <img class="cdi active-cdi" src="./imgs/多莉介绍.png">
+        <img class="cdi" src="./imgs/纳西妲介绍.png">
+        <img class="cdi" src="./imgs/坎蒂丝介绍.png">
+    </div>
+    <a class="footer">本页面及其所有附属页面素材均来自miHoYo,侵权必删。</a>
+</div>
+<script>
+    let cs = document.getElementsByClassName("c")
+    let lpics = document.getElementsByClassName("l")
+    let cds = document.getElementsByClassName("cdd")
+    let cdimgs = document.getElementsByClassName("cdi")
+    let names = document.getElementsByClassName("n")
+
+    function showReview() {
+        for (lpic of lpics) {
+            lpic.classList.remove("active-pic")
+        }
+        for (cd of cds) {
+            cd.classList.remove("active-cdd")
+        }
+        for (cdi of cdimgs) {
+            cdi.classList.remove("active-cdi")
+        }
+        for (n of names) {
+            n.classList.remove("active-name")
+        }
+        let i = Array.from(cs).indexOf(event.target)
+        lpics[i].classList.add("active-pic")
+        cds[i].classList.add("active-cdd")
+        cdimgs[i].classList.add("active-cdi")
+        names[i].classList.add('active-name')
+    }
+</script>
+</body>
+</html>

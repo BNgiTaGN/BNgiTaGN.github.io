@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link href="dl.css" type="text/css" rel="stylesheet">
+    <link href="index.css" type="text/css" rel="stylesheet">
+<!--    <meta http-equiv="refresh" content="1">-->
+</head>
+<body>
+    <div class="login-card-container">
+        <div class="login-card b-img">
+            <div class="login-card-header">
+                <h1>Sign in</h1>
+                <div>Please Login</div>
+                <div>
+                    <form class="login-card-form">
+                        <div class="form-item">
+                            <span class="ico">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="3" y="5" width="18" height="14" rx="2" />
+  <polyline points="3 7 12 13 21 7" />
+</svg>
+                            </span>
+                            <input type="text" id="username" placeholder="输入邮箱 默认114@514.com" required autofocus>
+                        </div>
+                        <div class="form-item">
+                            <span class="ico">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-key" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <circle cx="8" cy="15" r="4" />
+  <line x1="10.85" y1="12.15" x2="19" y2="4" />
+  <line x1="18" y1="5" x2="20" y2="7" />
+  <line x1="15" y1="8" x2="17" y2="10" />
+</svg>
+                            </span>
+                            <input type="password" id="passwd"  placeholder="输入密码 默认114514" required>
+                        </div>
+                        <div class="form-item-other">
+                            <div class="cheakbox">
+                            <input type="checkbox" id="rememberpassword">
+                            <label for="rememberpassword">记住我 </label>
+                        </div>
+                        </div>
+                    </form>
+                    <input type="button" value="登录" onclick="login()">
+                    <script type="text/javascript">
+			let accountAll = [{ // 存储账户json数据的数组
+					username: '114@514.com',
+					passwd: '114514'
+				}
+			]
+			function login() { //登陆判断
+				let username = document.getElementById('username').value;
+				let passwd = document.getElementById('passwd').value;
+				let account = accountAll.filter(function(e) {
+					return e.username == username
+				})[0]; // 筛选账号返回数组，不存在则返回空数组
+				if (!account) {
+					alert('账户不存在');
+				} else {
+					if (account.username == username && account.passwd == passwd) {
+						alert('登陆成功');
+						window.location.href="zy.html"
+					} else {
+						alert('密码错误');
+					}
+				}
+			}
+			function doClear() { //获取页面所有的input框，是text和password框，内容=空串
+				let inputs = document.getElementsByTagName("input");
+				for (let i = 0; i < inputs.length; i++) {
+					if (inputs[i].type == 'text' || inputs[i].type == 'password') {
+						inputs[i].value = '';
+					}
+				}
+			}
+			//给清除按钮增加onclick事件
+			let btnClear = document.getElementById('btnClear');
+			btnClear.addEventListener('click', function() {
+				doClear();
+			});
+		</script>
+                    <div class="login-card-footer">
+                        <a href="zhuce.html" target="_blank">注册账号</a>
+                        <a href="wangji.html" target="_blank">忘记密码</a>
+                        <a href="index.html">返回主页</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

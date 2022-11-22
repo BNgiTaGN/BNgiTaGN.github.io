@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到原神!</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
+    <style>
+        body {
+            /*background-image: url("./imgs/璃月港.jpg");*/
+            /*background-color:white;*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center;*/
+            /*background-size: 100%;*/
+            font-family: 'Montserrat', sans-serif;
+            min-height: 90vh;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img class="backgroundimg a-img" src="./imgs/璃月港.jpg">
+    <img class="ico" alt="" src="./imgs/原神图标.png">
+    <div class="zhuti">
+        <div class="daohanglan">
+            <li><a href="index.html" class="zy">主页</a></li>
+            <li><a href="md.html" class="md">蒙德</a></li>
+            <li><a href="ly.html" class="ly">璃月</a></li>
+            <li><a href="dq.html" class="dq">稻妻</a></li>
+            <li><a href="xm.html" class="xm">须弥</a></li>
+            <li><a href="dl.html" class="denglu">登录</a></li>
+        </div>
+    </div>
+    <a href="https://ys.mihoyo.com/">
+        <button>前往原神官网</button>
+    </a>
+</header>
+<div class="index">
+    <div class="renwu">
+        <img class="c" onclick="showReview()" src="./imgs/刻晴大头照.png"><br><a>刻晴</a><br>
+        <img class="c" onclick="showReview()" src="./imgs/甘雨大头照.png"><br><a>甘雨</a><br>
+        <img class="c" onclick="showReview()" src="./imgs/胡桃大头照.png"><br><a>胡桃</a><br>
+    </div>
+    <div class="lihui">
+        <img class="l active-pic" src="./imgs/刻晴立绘.png">
+        <img class="l" src="./imgs/甘雨立绘.png">
+        <img class="l" src="./imgs/胡桃立绘.png">
+    </div>
+    <div class="name">
+        <img class="n active-name" src="./imgs/刻晴名字.png">
+        <img class="n" src="./imgs/甘雨名字.png">
+        <img class="n" src="./imgs/胡桃名字.png">
+    </div>
+    <div class="cd">
+        <div class="cdd active-cdd">
+            <p>璃月七星之一，玉衡星。对「帝君一言而决的璃月」颇有微词——但实际上，神挺欣赏她这样的人。</p>
+            <p>她坚信与人类命运相关的事，应当由人类去做，而且人类一定可以做得更好。为了证明这一点，她比任何人都要努力。</p>
+
+        </div>
+        <div class="cdd">
+            <p>璃月七星的秘书，体内流淌着人类与仙兽的血脉。</p>
+            <p>天性优雅娴静，但仙兽「麒麟」温柔的性情与坚定毅重的工作态度毫无冲突。</p>
+            <p>毕竟，甘雨坚信自己所做的一切工作都是为了践行与帝君的契约，谋求璃月众生的最大福祉。</p>
+        </div>
+        <div class="cdd">
+            <p>胡桃——「往生堂」第七十七代堂主，掌控着璃月葬仪事务的重要人物。</p>
+            <p>尽心尽力地为人们完成送别之仪，维护着世间阴阳平衡之道。</p>
+            <p>除此以外还是个神奇打油诗人，诸多「杰作」被璃月人口口相传。</p>
+        </div>
+    </div>
+    <div class="cd-img">
+        <img class="cdi active-cdi" src="./imgs/刻晴介绍.png">
+        <img class="cdi" src="./imgs/甘雨介绍.png">
+        <img class="cdi" src="./imgs/胡桃介绍.png">
+    </div>
+    <a class="footer">本页面及其所有附属页面素材均来自miHoYo,侵权必删。</a>
+</div>
+<script>
+    let cs = document.getElementsByClassName("c")
+    let lpics = document.getElementsByClassName("l")
+    let cds = document.getElementsByClassName("cdd")
+    let cdimgs = document.getElementsByClassName("cdi")
+    let names = document.getElementsByClassName("n")
+
+    function showReview() {
+        for (lpic of lpics) {
+            lpic.classList.remove("active-pic")
+        }
+        for (cd of cds) {
+            cd.classList.remove("active-cdd")
+        }
+        for (cdi of cdimgs) {
+            cdi.classList.remove("active-cdi")
+        }
+        for (n of names) {
+            n.classList.remove("active-name")
+        }
+        let i = Array.from(cs).indexOf(event.target)
+        lpics[i].classList.add("active-pic")
+        cds[i].classList.add("active-cdd")
+        cdimgs[i].classList.add("active-cdi")
+        names[i].classList.add('active-name')
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎来到原神!</title>
+  <link href="index.css" type="text/css" rel="stylesheet">
+    <style>
+        body{
+            /*background: url("./imgs/提瓦特大陆.png");*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center;*/
+            font-family: 'Montserrat', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            /*animation: tolarge 0.5s ease;*/
+            min-height: 90vh;
+            background-size: 100%;
+            overflow: hidden;
+            align-items: center;
+            }
+    </style>
+</head>
+<body>
+    <img class="backgroundimg a-img" src="./imgs/提瓦特大陆.png">
+    <img class="backgroundimg" src="./imgs/蒙德城.jpg">
+    <img class="backgroundimg" src="./imgs/璃月港.jpg">
+    <img class="backgroundimg" src="./imgs/稻妻城.jpg">
+    <img class="backgroundimg" src="./imgs/须弥城.jpg">
+    <header>
+        <img class="ico" alt="" src="./imgs/原神图标.png">
+        <div class="zhuti">
+             <div class="daohanglan">
+                 <li><a href="index.html" class="zy">主页</a></li>
+                 <li><a href="md.html" class="md">蒙德</a></li>
+                 <li><a href="ly.html" class="ly">璃月</a></li>
+                 <li><a href="dq.html" class="dq">稻妻</a></li>
+                 <li><a href="xm.html" class="xm">须弥</a></li>
+                 <li><a href="dl.html" class="denglu">登录</a></li>
+            </div>
+        </div>
+        <a href="https://ys.mihoyo.com/" ><button>前往原神官网</button></a>
+    </header>
+    <div class="choosecity">
+<!--        <li><button class="city" onclick="showReview()">提瓦特</button></li>-->
+<!--        <li><button class="city" onclick="showReview()">蒙德</button></li>-->
+        <li class="city" onclick="showReview(),changeimgtwt()">提瓦特</li>
+        <li class="city" onclick="showReview(),changeimgmd()">蒙德</li>
+        <li class="city" onclick="showReview(),changeimgly()">璃月</li>
+        <li class="city" onclick="showReview(),changeimgdq()">稻妻</li>
+        <li class="city" onclick="showReview(),changeimgxm()">须弥</li>
+    </div>
+    <div class="zypage">
+        <div class="description active-des">
+            <img src="./imgs/提瓦特大陆名字.png">
+            <li class="ysdescription"><a>
+                这里是七种元素交汇的幻想世界「提瓦特」。
+                <br>
+                在遥远的过去，人们藉由对神灵的信仰，获赐了驱动元素的力量，得以在荒野中筑起家园。
+                <br>
+                五百年前，古国的覆灭却使得天地变异…
+                <br>
+                如今，席卷大陆的灾难已经停息，和平却仍未如期光临。</a>
+            </li>
+        </div>
+        <div class="description mdc">
+            <img src="./imgs/蒙德.png">
+            <li class="ysdescription">
+                <a class="cityname">蒙德<br></a>
+                <a>
+                位于提瓦特大陆东北部的自由城邦。<br>
+群山和广袤的平原间，自由之风携着蒲公英的气息吹拂过果酒湖，为坐落于湖心岛上的蒙德城送去风神巴巴托斯的祝福与恩泽。<br>
+                如今，席卷大陆的灾难已经停息，和平却仍未如期光临。</a>
+            </li>
+        </div>
+        <div class="description">
+            <img src="./imgs/璃月.png">
+            <li class="ysdescription">
+                <a class="cityname">璃月<br></a>
+                <a>
+                位于提瓦特大陆东方的富饶港湾。<br>
+傲然矗立的山麓与石林、广袤的平原与生机勃勃的河滩共同构成了璃月的丰富地貌，在四季分明的气候下焕发出多彩的风华。山石奇景间，又埋藏了多少<br>岩之魔神的古老馈赠等待着人们发掘呢？</a>
+            </li>
+        </div>
+        <div class="description">
+            <img src="./imgs/稻妻.png">
+            <li class="ysdescription">
+                <a class="cityname">稻妻<br></a>
+                <a>
+                位于提瓦特大陆远东的封闭群岛。<br>
+越过无尽的雷暴，踏上红枫与绯樱眷顾的诸岛，在环绕的砂堤、高耸的断崖与幽秘的山林之中，见证御建鸣神主尊大御所大人所追寻的永恒。</a>
+            </li>
+        </div>
+        <div class="description">
+            <img src="./imgs/须弥.png">
+            <li class="ysdescription">
+                <a class="cityname">须弥<br></a>
+                <a>
+                位于提瓦特大陆中西部的学城之都。<br>
+同时拥有葱郁雨林与荒芜沙土的奇异国度，无数智慧的果实在这里生长、埋葬。无论是穿越丛林踏上学城的台阶，还是深入沙漠挖掘赤土的遗迹，远道而来的旅者都可以在此获取宝贵的智识。</a>
+            </li>
+        </div>
+    </div>
+    <a class="footer">本页面及其所有附属页面素材均来自miHoYo,侵权必删。</a>
+<script>
+        // let cs=document.getElementsByClassName("c")
+        let cities=document.getElementsByClassName("city")
+        let dess=document.getElementsByClassName("description")
+        let bgis=document.getElementsByClassName("backgroundimg")
+    function showReview(){
+        // for(lpic of lpics){
+        //     lpic.classList.remove("active-pic")
+        // }
+        for(bgi of bgis){
+            bgi.classList.remove("a-img")
+        }
+        for(des of dess){
+            des.classList.remove("active-des")
+        }
+        let i=Array.from(cities).indexOf(event.target)
+        // lpics[i].classList.add("active-pic")
+        dess[i].classList.add("active-des")
+        bgis[i].classList.add("a-img")
+    }
+
+    function changeimgtwt(){
+            document.body.style.background = "url(./imgs/提瓦特大陆.png)";
+            document.body.style.backgroundSize = "120%"
+    }
+    function changeimgmd(){
+            document.body.style.background = "url(./imgs/蒙德城.jpg)";
+    }
+    function changeimgly(){
+            document.body.style.background = "url(./imgs/璃月港.jpg)";
+    }
+    function changeimgdq(){
+            document.body.style.background = "url(./imgs/稻妻城.jpg)";
+    }
+    function changeimgxm(){
+            document.body.style.background = "url(./imgs/须弥城.jpg)";
+
+    }
+    </script>
+</body>
+</html>

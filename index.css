@@ -1,0 +1,336 @@
+@import url('https://fonts.font.im/css?family=Montserrat');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    overflow: hidden;
+}
+body .backgroundimg {
+    display: none;
+}
+
+body .backgroundimg.a-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    animation: tolarge 2s ease;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    display: block;
+}
+
+body header .zhuti .daohanglan li a, body header a, body header a button {
+    color: white;
+    text-decoration: none; /*下划线*/
+}
+
+body header a:hover {
+    color: aquamarine;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+body header .ico {
+    width: 150px;
+    height: 128px;
+    cursor: pointer;
+}
+
+body header .zhuti .daohanglan {
+    list-style: none;
+}
+
+body header .zhuti .daohanglan li {
+    display: inline-block;
+    padding: 15px 15px;
+    /*line-height: 300px;*/
+    width: 100px;
+}
+
+body header .zhuti .daohanglan li:hover {
+    transform: scale(1.1);
+}
+
+body header .zhuti .daohanglan li a {
+    /*过渡*/
+    transition: all 0.3s ease 0s;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+body header .zhuti .daohanglan li .zy {
+    background-color: rgb(216, 107, 107);
+}
+
+body header .zhuti .daohanglan li .md {
+    background-color: rgba(0, 136, 169, 1);
+}
+
+body header .zhuti .daohanglan li .ly {
+    background-color: rgb(220, 153, 54);
+}
+
+body header .zhuti .daohanglan li .dq {
+    background-color: rgb(106, 44, 205);
+}
+
+body header .zhuti .daohanglan li .xm {
+    background-color: rgb(72, 191, 36);
+}
+
+body header .denglu {
+    background-color: rgba(196, 58, 129, 0.82);
+}
+
+body header .zhuti .daohanglan li a:hover {
+    /*排序*/
+    color: aquamarine;
+    background-color: rgba(0, 136, 169, 0.5);
+
+}
+
+body header a button {
+    padding: 10px 20px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+}
+
+body header a button:hover {
+    background-color: rgba(0, 136, 169, 0.5);
+    transform: scale(1.2);
+}
+
+body header .zhuti .daohanglan {
+    padding: 5px 30px;
+    background-color: rgba(177, 173, 173, 0.6);
+    border-radius: 30px;
+
+}
+
+body .index {
+    display: flex;
+    justify-content: left;
+    /*padding: 1px 1px;*/
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    box-sizing: content-box;
+    /*width: 1000px;*/
+    position: center;
+    height: 700px;
+    align-items: center;
+}
+
+body .index .renwu {
+    justify-content: space-between;
+    padding: 10px 5px;
+    position: relative;
+    left: 80px;
+    text-align: center;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 700;
+
+}
+
+.c {
+    padding: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.lihui img {
+    height: 750px;
+    width: auto;
+    position: relative;
+    right: -500px;
+    transition: 0.3s;
+}
+
+.l {
+    display: none;
+}
+
+.l.active-pic {
+    position: fixed;
+    top: 138px;
+    display: inline;
+    right: -150px;
+    animation: moveright 1s ease;
+
+}
+
+@keyframes moveright {
+    0% {
+        right: -200px;
+        opacity: 10%;
+    }
+    100% {
+        right: -150px;
+        opacity: 100%;
+    }
+}
+
+@keyframes moveup {
+    0% {
+        top: 150px;
+        opacity: 10%;
+    }
+    100% {
+        top: 50px;
+        opacity: 100%;
+    }
+}
+
+@keyframes opac {
+    0% {
+
+        opacity: 10%;
+    }
+    100% {
+
+        opacity: 100%;
+    }
+}
+
+@keyframes tolarge {
+    0% {
+        /*opacity: 0;*/
+        min-width: 130%;
+    }
+    100% {
+        /*opacity: 100%;*/
+        min-width: 100%;
+    }
+}
+
+.cd .cdd {
+    display: none;
+}
+
+.cdd.active-cdd {
+
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    align-self: center;
+    left: 150px;
+    width: 650px;
+    padding: 20px 10px;
+    top: -100px;
+    color: white;
+    text-align: center;
+    /*position: fixed;*/
+    border-radius: 20px;
+    display: block;
+    animation: moveright 0.5s linear forwards;
+}
+
+.cdi {
+    display: none;
+}
+
+.cdi.active-cdi {
+    display: block;
+    animation: moveright 0.8s linear forwards;
+    position: relative;
+    top: 150px;
+    left: 80px;
+}
+
+.n {
+    display: none;
+}
+
+.n.active-name {
+    display: inline;
+    position: absolute;
+    left: 400px;
+    animation: moveright 0.8s linear forwards;
+}
+
+.zypage {
+    text-align: center;
+    align-items: center;
+    /*box-sizing: border-box;*/
+}
+
+.zypage .description img {
+    animation: opac 3s ease;
+}
+
+.description {
+    display: none;
+}
+
+.description img {
+    width: 300px;
+}
+
+.description.active-des {
+    align-items: center;
+    display: inline-block;
+}
+
+.description.active-des .cityname {
+    font-size: 50px;
+}
+
+.zypage .description li {
+    background-color: rgba(255, 255, 255, 0.38);
+    padding: 20px 100px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    animation: moveup 1s ease;
+    width: 800px;
+    top: 50px
+}
+
+.choosecity {
+    position: absolute;
+    left: 200px;
+    bottom: 280px;
+    color: snow;
+    font-size: 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px 20px;
+    border-radius: 15px;
+}
+
+.choosecity li {
+    cursor: pointer;
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 30px;
+}
+.city:hover{
+    transform: scale(1.1);
+    /*animation: ease;*/
+}
+.footer{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 3px;
+    color: snow;
+}
